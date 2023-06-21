@@ -1,0 +1,25 @@
+0. TestData:
+[
+    ["locked_out_user", "secret_sauce",
+    "Epic sadface: Sorry, this user has been locked out."]
+]
+
+1. Name: Authorization on https://www.saucedemo.com/ with username of blocked user
+
+2. Priority: Blocker
+
+3. Preconditions:
+- Swag Labs main page https://www.saucedemo.com/ is opened in Google Chrome
+
+4. Steps to reproduce:
+- Enter blocked username into username field "TestData[0]""
+- Enter correct password into password field "TestData[1]"
+- Click "Login" button
+- Check presence of error field with "TestData[2]" text under the login form
+
+5. Expected result:
+- Swag Labs is opened
+- Username entered
+- Password entered
+- Login button is pushed
+- Error field and "TestData[2]" text are present

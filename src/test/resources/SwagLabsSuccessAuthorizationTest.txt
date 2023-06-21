@@ -1,0 +1,24 @@
+0. TestData:
+[
+    ["standard_user", "secret_sauce", "Products"]
+]
+
+1. Name: Authorization on https://www.saucedemo.com/ with correct login data
+
+2. Priority: Blocker
+
+3. Preconditions:
+- Swag Labs main page https://www.saucedemo.com/ is opened in Google Chrome
+
+4. Steps to reproduce:
+- Enter correct username into username field "TestData[0]"
+- Enter correct password into password field "TestData[1]"
+- Click "Login" button
+- Check presence of "TestData[2]" text in the header and presence of products to buy so to verify successful authorization
+
+5. Expected result:
+- Swag Labs is opened
+- Username entered
+- Password entered
+- Login button is pushed
+- "TestData[2]" text and products to buy are present
