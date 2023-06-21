@@ -1,10 +1,8 @@
-0. Test Data:
+0. TestData:
 [
-    ["https://www.saucedemo.com/"],
-    ["standard_user", "secret_sauce"],
-    ["Products"],
-    ["Sauce Labs Backpack", "$29.99"],
-    ["Thank you for your order!",
+    ["standard_user", "secret_sauce", "Products",
+    "Sauce Labs Backpack", "$29.99",
+    "Thank you for your order!",
     "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
 ]
 
@@ -16,40 +14,38 @@
 - Swag Labs main page https://www.saucedemo.com/ is opened in Google Chrome
 
 4. Steps to reproduce:
-- Enter correct username into username field ("standard_user")
-- Enter correct password into password field ("secret_sauce")
+- Enter correct username into username field "TestData[0]"
+- Enter correct password into password field "TestData[1]"
 - Click "Login" button
-- Check presence of "Products" text in the header and presence of products to buy so to verify successful authorization
-- Add Sauce Labs Backpack to Cart
+- Check presence of "TestData[2]" text in the header and presence of products to buy so to verify successful authorization
+- Add "TestData[3]" to Cart
 - Navigate to Cart
-- Check that product title and price are correct
+- Check that "TestData[3]" and "TestData[4]" are correct
 - Navigate to personal information form
 - Fill out the form
 - Click "Continue"
-- Check that final product title and price are correct
+- Check that final "TestData[3]" and "TestData[4]" are correct
 - Click "Finish" button
-- Check presence of "Thank you for your order!" and
-"Your order has been dispatched, and will arrive just as fast as the pony can get there!" text on the page
+- Check presence of "TestData[5]" and "TestData[6]" text on the page
 - Navigate to the main page
-- Check presence of "Products" text in the header and presence of products to buy so to verify the main page
+- Check presence of "TestData[2]" text in the header and presence of products to buy so to verify the main page
 
 5. Expected result:
 - Swag Labs is opened
-- Username entered
-- Password entered
+- Username "TestData[0]" entered
+- Password "TestData[1]" entered
 - Login button is pushed
-- "Products" text and products to buy are present
-- Sauce Labs Backback is added to Cart
+- "TestData[2]" text and products to buy are present
+- "TestData[3]" is added to Cart
 - The Cart is opened
-- Product title and price are correct
+- "TestData[3]" and "TestData[4]" are correct
 - Personal information form is opened
 - The form is filled out
 - "Continue" button is pushed
-- Final product title and price are correct
+- Final "TestData[3]" and "TestData[4]" are correct
 - "Finish" button is pushed
-- "Thank you for your order!" and
-  "Your order has been dispatched, and will arrive just as fast as the pony can get there!" texts are present
+- "TestData[5]" and "TestData[6]" texts are present
 - Main page is opened
-- "Products" text and products to buy are present
+- "TestData[2]" text and products to buy are present
 
 

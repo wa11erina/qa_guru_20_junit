@@ -1,6 +1,8 @@
 0. TestData:
 [
     ["standard_user", "secret_sauce", "Products"]
+    ["problem_user", "secret_sauce", "Products"]
+    ["performance_glitch_user", "secret_sauce", "Products"]
 ]
 
 1. Name: Authorization on https://www.saucedemo.com/ with correct login data
