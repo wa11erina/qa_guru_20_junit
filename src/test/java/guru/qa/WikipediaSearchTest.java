@@ -27,8 +27,8 @@ public class WikipediaSearchTest {
 
     static Stream<Arguments> WikipediaSearchTest() {
         return Stream.of(
-                Arguments.of(Locale.English, List.of("Main Page", "Talk", "Read", "View source", "View history")),
-                Arguments.of(Locale.Español, List.of("Portada", "Discusión", "Leer", "Ver código fuente", "Ver historial"))
+                Arguments.of(WikiLocale.English, List.of("Main Page", "Talk", "Read", "View source", "View history")),
+                Arguments.of(WikiLocale.Español, List.of("Portada", "Discusión", "Leer", "Ver código fuente", "Ver historial"))
 
         );
     }
@@ -40,7 +40,7 @@ public class WikipediaSearchTest {
 
     @MethodSource
     @ParameterizedTest(name="Collecting Wikipedia Sections in {0}")
-    void WikipediaSearchTest(Locale locale, List<String> expectedResults) {
+    void WikipediaSearchTest(WikiLocale locale, List<String> expectedResults) {
         open("https://www.wikipedia.org/");
         $$(".central-featured a").find(text(locale.name())).click();
         $$(".vector-page-toolbar a").should(CollectionCondition.sizeGreaterThan(5));
