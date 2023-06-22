@@ -1,5 +1,5 @@
 package guru.qa;
 
 public enum Locale {
-    Русский, English
+    ru, Русский, English, Español, EN
 }
