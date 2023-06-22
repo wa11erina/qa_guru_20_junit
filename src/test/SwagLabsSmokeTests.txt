@@ -1,0 +1,79 @@
+0. TestData:
+[
+    ["standard_user", "secret_sauce", "Products",
+    "add-to-cart-sauce-labs-backpack",
+    "Sauce Labs Backpack", "$29.99",
+    "Thank you for your order!",
+    "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
+
+    ["standard_user", "secret_sauce", "Products",
+    "add-to-cart-sauce-labs-bike-light",
+    "Sauce Labs Bike Light", "$9.99",
+    "Thank you for your order!",
+    "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
+
+    ["standard_user", "secret_sauce", "Products",
+    "add-to-cart-sauce-labs-bolt-t-shirt",
+    "Sauce Labs Bolt T-Shirt", "$15.99",
+    "Thank you for your order!",
+    "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
+
+    ["performance_glitch_user", "secret_sauce", "Products",
+    "add-to-cart-sauce-labs-fleece-jacket",
+    "Sauce Labs Fleece Jacket", "$49.99",
+    "Thank you for your order!",
+    "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
+
+    ["performance_glitch_user", "secret_sauce", "Products",
+    "add-to-cart-sauce-labs-onesie",
+    "Sauce Labs Onesie", "$7.99",
+    "Thank you for your order!",
+    "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
+
+    ["performance_glitch_user", "secret_sauce", "Products",
+    "add-to-cart-test.allthethings()-t-shirt-(red)",
+    "Test.allTheThings() T-Shirt (Red)", "$15.99",
+    "Thank you for your order!",
+    "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]
+
+]
+
+1. Name: Smoke test on https://www.saucedemo.com/: Authorization, product choice, adding product to cart, buying product
+
+2. Priority: Blocker
+
+3. Preconditions:
+- Swag Labs main page https://www.saucedemo.com/ is opened in Google Chrome
+
+4. Steps to reproduce:
+- Enter correct username into username field "TestData[0]"
+- Enter correct password into password field "TestData[1]"
+- Click "Login" button
+- Check presence of "TestData[2]" text in the header and presence of products to buy so to verify successful authorization
+- Add "TestData[3]" to Cart
+- Navigate to Cart
+- Check that "TestData[4]" and "TestData[5]" are correct
+- Navigate to personal information form
+- Fill out the form
+- Click "Continue"
+- Click "Finish" button
+- Check presence of "TestData[6]" and "TestData[7]" text on the page
+- Navigate to the main page
+
+5. Expected result:
+- Swag Labs is opened
+- Username "TestData[0]" entered
+- Password "TestData[1]" entered
+- Login button is pushed
+- "TestData[2]" text and products to buy are present
+- "TestData[3]" is added to Cart
+- The Cart is opened
+- "TestData[4]" and "TestData[5]" are correct
+- Personal information form is opened
+- The form is filled out
+- "Continue" button is pushed
+- "Finish" button is pushed
+- "TestData[6]" and "TestData[7]" texts are present
+- Main page is opened
+
+
