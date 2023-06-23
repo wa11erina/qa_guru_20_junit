@@ -1,8 +1,8 @@
-package guru.qa;
+package guru.qa.tests;
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.Disabled;
+import guru.qa.enums.WikiLocale;
+import guru.qa.tests.TestBase;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,20 +15,13 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class WikipediaSearchTest {
+public class WikipediaSearchTest extends TestBase {
 
 
-    static {
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-    }
-
-
-    static Stream<Arguments> WikipediaSearchTest() {
+    static Stream<Arguments> wikipediaSearchTest() {
         return Stream.of(
-                Arguments.of(WikiLocale.English, List.of("Main Page", "Talk", "Read", "View source", "View history")),
-                Arguments.of(WikiLocale.Español, List.of("Portada", "Discusión", "Leer", "Ver código fuente", "Ver historial"))
+                Arguments.of(WikiLocale.ENGLISH, List.of("Main Page", "Talk", "Read", "View source", "View history")),
+                Arguments.of(WikiLocale.ESPAÑOL, List.of("Portada", "Discusión", "Leer", "Ver código fuente", "Ver historial"))
 
         );
     }
@@ -40,7 +33,7 @@ public class WikipediaSearchTest {
 
     @MethodSource
     @ParameterizedTest(name="Collecting Wikipedia Sections in {0}")
-    void WikipediaSearchTest(WikiLocale locale, List<String> expectedResults) {
+    void wikipediaSearchTest(WikiLocale locale, List<String> expectedResults) {
         open("https://www.wikipedia.org/");
         $$(".central-featured a").find(text(locale.name())).click();
         $$(".vector-page-toolbar a").should(CollectionCondition.sizeGreaterThan(5));
