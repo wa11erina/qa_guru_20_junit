@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
 
-
     Faker faker = new Faker();
 
     @BeforeAll
