@@ -50,7 +50,7 @@ public class SwagLabsCsvTest extends TestBase {
         $(".inventory_item_name").shouldHave(text(productTitle));
         $(".inventory_item_price").shouldHave(text(productPrice));
 
-        // Reset App State so to make possible run other parametrized tests
+        // Reset App State so to make possible run other parameterized tests
         $("#react-burger-menu-btn").click();
         $("#reset_sidebar_link").click();
 
